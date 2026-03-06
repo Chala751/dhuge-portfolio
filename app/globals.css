@@ -1,26 +1,66 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #f4f1ea;
+  --paper: #fbf8f1;
+  --ink: #1b1a18;
+  --muted: #6b665d;
+  --line: #d8d2c4;
+  --accent: #c96f45;
+  --forest: #2b4a3f;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background: var(--bg);
+  --color-foreground: var(--ink);
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-heading);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  font-family: var(--font-body), sans-serif;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(201, 111, 69, 0.14), transparent 35%),
+    radial-gradient(circle at 85% 5%, rgba(43, 74, 63, 0.16), transparent 30%),
+    linear-gradient(180deg, #f7f4ee, #f1ede4 35%, #ece6db 100%);
+  min-height: 100vh;
+}
+
+* {
+  border-color: var(--line);
+}
+
+.grid-paper {
+  background-image:
+    linear-gradient(rgba(27, 26, 24, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 26, 24, 0.04) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.section-reveal {
+  animation: fadeUp 850ms ease both;
+}
+
+.section-reveal-delay-1 {
+  animation-delay: 120ms;
+}
+
+.section-reveal-delay-2 {
+  animation-delay: 240ms;
+}
+
+.section-reveal-delay-3 {
+  animation-delay: 360ms;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
