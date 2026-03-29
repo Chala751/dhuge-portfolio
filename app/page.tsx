@@ -97,6 +97,35 @@ export default function Home() {
         </header>
 
         <section className="section-reveal section-reveal-delay-1 mt-12 md:mt-16">
+          <div className="surface soft-outline grid grid-cols-1 items-center gap-8 rounded-3xl p-6 md:grid-cols-[0.9fr_1.1fr] md:gap-12">
+            <div className="relative">
+              <div className="absolute -inset-2 rounded-[2rem] bg-gradient-to-br from-[#e5c8ad]/70 via-transparent to-[#f3eadf]/80 blur-lg" />
+              <div className="relative overflow-hidden rounded-[1.75rem]">
+                <img
+                  src="/architect.jpg"
+                  alt="Portrait of architect Dhugasa Gemachu"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+            <div className="space-y-4">
+              <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Studio Founder</p>
+              <h2 className="font-serif text-3xl leading-tight md:text-4xl">Dhugasa Gemachu</h2>
+              <p className="text-sm leading-7 text-[var(--muted)] md:text-base">
+                An architect focused on material clarity, climate-responsive form, and spaces that honor
+                cultural memory. Dhugasa leads projects from concept through delivery with a calm,
+                detail-first approach.
+              </p>
+              <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.18em] text-[var(--muted)]">
+                <span className="rounded-full border border-[var(--line)] px-3 py-2">Principal Architect</span>
+                <span className="rounded-full border border-[var(--line)] px-3 py-2">Urban + Civic</span>
+                <span className="rounded-full border border-[var(--line)] px-3 py-2">Sustainable Systems</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="section-reveal section-reveal-delay-1 mt-12 md:mt-16">
           <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Portfolio</p>
