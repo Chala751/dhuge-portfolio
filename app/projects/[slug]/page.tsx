@@ -56,11 +56,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 </header>
 
                 <section className="section-reveal section-reveal-delay-1 mt-10">
-                    <div className="overflow-hidden rounded-3xl">
+                    <div className="overflow-hidden rounded-3xl bg-[#0b0b0b]">
                         <img
                             src={project.image}
                             alt={project.name}
-                            className="h-[320px] w-full object-cover object-center md:h-[420px]"
+                            className="h-auto w-full object-contain"
                         />
                     </div>
                 </section>
@@ -68,7 +68,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 <section className="section-reveal section-reveal-delay-2 mt-10">
                     <div className="grid gap-6 md:grid-cols-2">
                         {project.images.map((image, index) => (
-                            <div key={`${project.slug}-${index}`} className="overflow-hidden rounded-3xl">
+                            <div
+                                key={`${project.slug}-${index}`}
+                                className="overflow-hidden rounded-3xl bg-[#0b0b0b]"
+                            >
                                 <img
                                     src={image}
                                     alt={`${project.name} view ${index + 1}`}

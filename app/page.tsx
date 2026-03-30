@@ -124,7 +124,7 @@ export default function Home() {
                 href={`/projects/${project.slug}`}
                 className={`section-reveal section-reveal-delay-${index + 1} surface soft-outline card-hover rounded-3xl p-5`}
               >
-                <div className="mb-4 overflow-hidden rounded-2xl">
+                <div className="mb-4 overflow-hidden rounded-2xl bg-[#0b0b0b]">
                   <img
                     src={project.image}
                     alt={project.name}
