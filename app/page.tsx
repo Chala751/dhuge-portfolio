@@ -4,19 +4,19 @@ export default function Home() {
       name: "Abyssinia Cultural Pavilion",
       type: "Civic / 2025",
       note: "A layered brick-and-light concept that frames public gathering around courtyards and shaded passages.",
-      tone: "from-[#c96f45]/60 via-[#dba07b]/40 to-[#f4e2d4]/40",
+      tone: "from-[#0f0f0f]/80 via-[#2a2a2a]/60 to-[#f0f0f0]/35",
     },
     {
       name: "Ridge House Compound",
       type: "Residential / 2024",
       note: "Terraced living spaces embedded into slope geometry with passive cooling and framed valley views.",
-      tone: "from-[#2b4a3f]/70 via-[#517065]/45 to-[#dfe6e3]/40",
+      tone: "from-[#151515]/85 via-[#3a3a3a]/60 to-[#e6e6e6]/35",
     },
     {
       name: "Addis Work Loft",
       type: "Commercial / 2023",
       note: "Adaptive reuse of an industrial shell into a collaborative studio with daylight-first interior planning.",
-      tone: "from-[#54534f]/70 via-[#8a877f]/45 to-[#ece7db]/45",
+      tone: "from-[#1a1a1a]/85 via-[#4a4a4a]/60 to-[#f2f2f2]/35",
     },
   ];
 
@@ -43,7 +43,7 @@ export default function Home() {
             <div className="space-y-6">
               <p className="chip inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs uppercase tracking-[0.18em]">
                 Dhugasa Gemachu
-                <span className="h-2 w-2 rounded-full bg-[var(--gold)]" aria-hidden />
+                <span className="h-2 w-2 rounded-full bg-[var(--paper)]" aria-hidden />
               </p>
               <h1 className="font-serif text-5xl leading-[0.96] md:text-7xl">
                 Designing spaces with
@@ -57,11 +57,11 @@ export default function Home() {
               <div className="flex flex-wrap gap-3">
                 <a
                   href="mailto:dhugasa.gemachu@studio.com"
-                  className="inline-flex items-center justify-center rounded-full bg-[var(--forest)] px-6 py-3 text-sm font-semibold text-[#f7f3ec] transition hover:bg-[#1a352e]"
+                  className="inline-flex items-center justify-center rounded-full bg-[var(--paper)] px-6 py-3 text-sm font-semibold text-[var(--ink)] transition hover:bg-[#e5e5e5]"
                 >
                   Start a Project
                 </a>
-                <button className="soft-outline surface inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[var(--forest)] transition hover:-translate-y-0.5">
+                <button className="soft-outline surface inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[var(--paper)] transition hover:-translate-y-0.5">
                   View Studio Profile
                 </button>
               </div>
@@ -99,7 +99,7 @@ export default function Home() {
         <section className="section-reveal section-reveal-delay-1 mt-12 md:mt-16">
           <div className="surface soft-outline grid grid-cols-1 items-center gap-8 rounded-3xl p-6 md:grid-cols-[0.9fr_1.1fr] md:gap-12">
             <div className="relative">
-              <div className="absolute -inset-2 rounded-[2rem] bg-gradient-to-br from-[#e5c8ad]/70 via-transparent to-[#f3eadf]/80 blur-lg" />
+              <div className="absolute -inset-2 rounded-[2rem] bg-gradient-to-br from-[#ffffff]/20 via-transparent to-[#ffffff]/5 blur-lg" />
               <div className="relative overflow-hidden rounded-[1.75rem]">
                 <img
                   src="/architect.jpg"
@@ -168,25 +168,25 @@ export default function Home() {
             <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Process</p>
             <div className="mt-4 space-y-4 text-sm">
               <div className="flex items-start gap-4 border-b border-[var(--line)] pb-4">
-                <p className="font-serif text-2xl text-[var(--forest)]">01</p>
+                <p className="font-serif text-2xl text-[var(--paper)]">01</p>
                 <p>Context mapping and concept development rooted in local identity.</p>
               </div>
               <div className="flex items-start gap-4 border-b border-[var(--line)] pb-4">
-                <p className="font-serif text-2xl text-[var(--forest)]">02</p>
+                <p className="font-serif text-2xl text-[var(--paper)]">02</p>
                 <p>Iterative spatial studies with structural and environmental alignment.</p>
               </div>
               <div className="flex items-start gap-4">
-                <p className="font-serif text-2xl text-[var(--forest)]">03</p>
+                <p className="font-serif text-2xl text-[var(--paper)]">03</p>
                 <p>Detail-focused execution with material clarity and lasting craftsmanship.</p>
               </div>
             </div>
           </div>
         </section>
 
-        <footer className="section-reveal section-reveal-delay-3 mt-12 rounded-3xl bg-[var(--forest)] px-6 py-10 text-[#f7f3ec] md:mt-16 md:px-8">
+        <footer className="section-reveal section-reveal-delay-3 mt-12 rounded-3xl bg-[var(--paper)] px-6 py-10 text-[var(--ink)] md:mt-16 md:px-8">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-[#d9d4c8]">Start a Project</p>
+              <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Start a Project</p>
               <h2 className="mt-4 max-w-xl font-serif text-3xl leading-tight md:text-5xl">
                 Ready to shape a space that belongs to its place?
               </h2>
@@ -194,11 +194,11 @@ export default function Home() {
             <div className="flex flex-wrap gap-3">
               <a
                 href="mailto:dhugasa.gemachu@studio.com"
-                className="inline-flex items-center justify-center rounded-full bg-[#f7f3ec] px-6 py-3 text-sm font-semibold text-[var(--forest)] transition hover:bg-[#ece4d8]"
+                className="inline-flex items-center justify-center rounded-full bg-[var(--ink)] px-6 py-3 text-sm font-semibold text-[var(--paper)] transition hover:bg-[#000000]"
               >
                 Contact Dhugasa
               </a>
-              <button className="inline-flex items-center justify-center rounded-full border border-[#f7f3ec] px-6 py-3 text-sm font-semibold text-[#f7f3ec] transition hover:bg-[#1f3e34]">
+              <button className="inline-flex items-center justify-center rounded-full border border-[var(--ink)] px-6 py-3 text-sm font-semibold text-[var(--ink)] transition hover:bg-[#e5e5e5]">
                 Download Profile
               </button>
             </div>

@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #f2f0ea;
-  --paper: #fdfbf6;
-  --ink: #141412;
-  --muted: #5e5a52;
-  --line: #ded7cb;
-  --accent: #d17a4c;
-  --forest: #21433a;
-  --teal: #2c6a6f;
-  --gold: #c9a45c;
-  --rose: #e2a28b;
+  --bg: #0b0b0b;
+  --paper: #f7f7f7;
+  --ink: #111111;
+  --muted: #5a5a5a;
+  --line: #1e1e1e;
+  --accent: #bfbfbf;
+  --forest: #1a1a1a;
+  --teal: #4d4d4d;
+  --gold: #e0e0e0;
+  --rose: #cfcfcf;
 }
 
 @theme inline {
@@ -21,13 +21,13 @@
 }
 
 body {
-  color: var(--ink);
+  color: var(--paper);
   font-family: var(--font-body), sans-serif;
   background:
-    radial-gradient(circle at 12% 12%, rgba(44, 106, 111, 0.16), transparent 32%),
-    radial-gradient(circle at 85% 8%, rgba(209, 122, 76, 0.18), transparent 30%),
-    radial-gradient(circle at 70% 85%, rgba(201, 164, 92, 0.16), transparent 36%),
-    linear-gradient(180deg, #f8f6f0 0%, #f0ebe1 45%, #e8e0d2 100%);
+    radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.06), transparent 35%),
+    radial-gradient(circle at 85% 12%, rgba(255, 255, 255, 0.08), transparent 32%),
+    radial-gradient(circle at 70% 85%, rgba(255, 255, 255, 0.05), transparent 38%),
+    linear-gradient(180deg, #0b0b0b 0%, #0e0e0e 55%, #101010 100%);
   min-height: 100vh;
 }
 
@@ -37,8 +37,8 @@ body {
 
 .grid-paper {
   background-image:
-    linear-gradient(rgba(27, 26, 24, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(27, 26, 24, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 22px 22px;
 }
 
@@ -61,7 +61,7 @@ body {
   height: 520px;
   left: -120px;
   top: -140px;
-  background: radial-gradient(circle, rgba(44, 106, 111, 0.22), transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08), transparent 70%);
 }
 
 .page-shell::after {
@@ -69,30 +69,30 @@ body {
   height: 620px;
   right: -220px;
   top: 60px;
-  background: radial-gradient(circle, rgba(209, 122, 76, 0.22), transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.06), transparent 70%);
 }
 
 .surface {
-  background: linear-gradient(180deg, rgba(253, 251, 246, 0.98), rgba(248, 244, 237, 0.94));
+  background: linear-gradient(180deg, rgba(18, 18, 18, 0.98), rgba(12, 12, 12, 0.94));
   box-shadow:
-    0 18px 40px rgba(20, 20, 18, 0.08),
-    0 2px 8px rgba(20, 20, 18, 0.04);
+    0 18px 40px rgba(0, 0, 0, 0.45),
+    0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .soft-outline {
-  border: 1px solid rgba(27, 26, 24, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .chip {
-  background: rgba(44, 106, 111, 0.12);
-  color: var(--teal);
-  border: 1px solid rgba(44, 106, 111, 0.28);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--paper);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .accent-pill {
-  background: linear-gradient(135deg, rgba(209, 122, 76, 0.18), rgba(201, 164, 92, 0.16));
-  border: 1px solid rgba(209, 122, 76, 0.28);
-  color: var(--forest);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--paper);
 }
 
 .card-hover {
@@ -101,12 +101,12 @@ body {
 
 .card-hover:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(20, 20, 18, 0.12);
-  border-color: rgba(44, 106, 111, 0.45);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .text-gradient {
-  background: linear-gradient(120deg, #21433a, #2c6a6f 55%, #d17a4c 110%);
+  background: linear-gradient(120deg, #ffffff 0%, #cfcfcf 55%, #8a8a8a 110%);
   -webkit-background-clip: text;
   color: transparent;
 }
