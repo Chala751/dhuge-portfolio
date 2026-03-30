@@ -147,7 +147,7 @@ export default function Home() {
                   <img
                     src={project.image}
                     alt={project.name}
-                    className="h-44 w-full object-cover grayscale"
+                    className="h-48 w-full object-cover object-center"
                   />
                 </div>
                 <p className="text-xs uppercase tracking-[0.18em] text-[var(--muted)]">{project.type}</p>
