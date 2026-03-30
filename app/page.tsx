@@ -1,27 +1,7 @@
+import Link from "next/link";
+import { projects } from "./data/projects";
+
 export default function Home() {
-  const projects = [
-    {
-      name: "Abyssinia Cultural Pavilion",
-      type: "Civic / 2025",
-      note: "A layered brick-and-light concept that frames public gathering around courtyards and shaded passages.",
-      tone: "from-[#0f0f0f]/80 via-[#2a2a2a]/60 to-[#f0f0f0]/35",
-      image: "/architect1.jpg",
-    },
-    {
-      name: "Ridge House Compound",
-      type: "Residential / 2024",
-      note: "Terraced living spaces embedded into slope geometry with passive cooling and framed valley views.",
-      tone: "from-[#151515]/85 via-[#3a3a3a]/60 to-[#e6e6e6]/35",
-      image: "/architect2.jpg",
-    },
-    {
-      name: "Addis Work Loft",
-      type: "Commercial / 2023",
-      note: "Adaptive reuse of an industrial shell into a collaborative studio with daylight-first interior planning.",
-      tone: "from-[#1a1a1a]/85 via-[#4a4a4a]/60 to-[#f2f2f2]/35",
-      image: "/architect3.jpg",
-    },
-  ];
 
   return (
     <main className="page-shell">
@@ -139,8 +119,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {projects.map((project, index) => (
-              <article
-                key={project.name}
+              <Link
+                key={project.slug}
+                href={`/projects/${project.slug}`}
                 className={`section-reveal section-reveal-delay-${index + 1} surface soft-outline card-hover rounded-3xl p-5`}
               >
                 <div className="mb-4 overflow-hidden rounded-2xl">
@@ -153,7 +134,7 @@ export default function Home() {
                 <p className="text-xs uppercase tracking-[0.18em] text-[var(--muted)]">{project.type}</p>
                 <h3 className="mt-2 font-serif text-2xl leading-tight">{project.name}</h3>
                 <p className="mt-3 text-sm leading-6 text-[var(--muted)]">{project.note}</p>
-              </article>
+              </Link>
             ))}
           </div>
         </section>
