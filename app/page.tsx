@@ -1,31 +1,13 @@
 import Link from "next/link";
 import { projects } from "./data/projects";
-import ThemeToggle from "./components/ThemeToggle";
+import NavBar from "./components/NavBar";
 
 export default function Home() {
 
   return (
     <main className="page-shell">
       <div className="mx-auto max-w-6xl px-6 pb-16 pt-24 md:px-10 md:pt-28">
-        <div className="nav-shell fixed inset-x-0 top-0 z-40 border-b border-[var(--line)] px-6 py-4 backdrop-blur md:px-10">
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <div className="soft-outline surface flex h-12 w-12 items-center justify-center rounded-2xl font-serif text-xl">
-                DG
-              </div>
-              <div>
-                <p className="text-xs uppercase tracking-[0.22em] text-[var(--muted)]">Architecture Studio</p>
-                <p className="text-sm text-[var(--muted)]">Addis Ababa, Ethiopia</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="accent-pill rounded-full px-4 py-2 text-xs uppercase tracking-[0.18em]">
-                Open for 2026 commissions
-              </div>
-              <ThemeToggle />
-            </div>
-          </div>
-        </div>
+        <NavBar />
 
         <header className="section-reveal flex flex-col gap-8 border-b border-[var(--line)] pb-10 pt-8 md:gap-12">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-[1.15fr_0.85fr] md:gap-12">
