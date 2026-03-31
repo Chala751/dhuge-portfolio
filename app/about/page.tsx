@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CertificateGallery from "../components/CertificateGallery";
 
 export default function AboutPage() {
     return (
@@ -69,7 +70,7 @@ export default function AboutPage() {
                                         <p className="font-semibold">BSc Architecture</p>
                                         <p className="text-[var(--muted)]">University of Gondar</p>
                                     </div>
-                                    <p className="font-serif text-2xl text-[var(--paper)]">2019</p>
+                                    <p className="font-serif text-2xl text-[var(--paper)]">2018</p>
                                 </div>
                                 <p className="mt-3 text-[var(--muted)]">
                                     Focused on spatial composition, tectonics, and contextual design research.
@@ -81,7 +82,7 @@ export default function AboutPage() {
                                         <p className="font-semibold">MSc Construction Management</p>
                                         <p className="text-[var(--muted)]">Addis Ababa University</p>
                                     </div>
-                                    <p className="font-serif text-2xl text-[var(--paper)]">2023</p>
+                                    <p className="font-serif text-2xl text-[var(--paper)]">2024</p>
                                 </div>
                                 <p className="mt-3 text-[var(--muted)]">
                                     Specialization in project delivery systems, cost control, and site coordination.
@@ -138,48 +139,17 @@ export default function AboutPage() {
                         <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Certificates</p>
                         <h2 className="mt-3 font-serif text-3xl leading-tight">Professional credentials</h2>
                         <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
-                            Dugasa holds multiple certifications in construction oversight, sustainable systems,
-                            and project delivery. Replace the placeholders below with certificate images when ready.
+                            Dugassa holds multiple certifications in construction oversight, sustainable systems,
+                            and project delivery.
                         </p>
-                        <div className="mt-6 grid gap-4 md:grid-cols-[1.1fr_0.9fr]">
-                            <div className="media-frame overflow-hidden rounded-2xl">
-                                <img
-                                    src="/architect9.jpg"
-                                    alt="Featured certificate"
-                                    className="h-48 w-full object-cover sm:h-56"
-                                />
-                            </div>
-                            <div className="grid gap-3">
-                                {["Sustainability Systems", "Construction Oversight", "Project Delivery", "Site Safety"].map(
-                                    (label, index) => (
-                                        <div
-                                            key={label}
-                                            className="flex items-center justify-between rounded-2xl border border-[var(--line)] px-4 py-3 text-sm"
-                                        >
-                                            <div>
-                                                <p className="font-semibold text-[var(--paper)]">{label}</p>
-                                                <p className="text-xs text-[var(--muted)]">Certificate {index + 1}</p>
-                                            </div>
-                                            <span className="text-xs uppercase tracking-[0.18em] text-[var(--muted)]">
-                                                2020-
-                                                {index + 21}
-                                            </span>
-                                        </div>
-                                    )
-                                )}
-                            </div>
-                        </div>
-                        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                            {[1, 2, 3].map((item) => (
-                                <div key={item} className="media-frame overflow-hidden rounded-2xl">
-                                    <img
-                                        src="/architect9.jpg"
-                                        alt={`Certificate gallery ${item}`}
-                                        className="h-32 w-full object-cover sm:h-28"
-                                    />
-                                </div>
-                            ))}
-                        </div>
+                        <CertificateGallery
+                            featured={{ src: "/certificate.png", alt: "Featured certificate" }}
+                            gallery={[
+                                { src: "/certificate1.png", alt: "Certificate 1" },
+                                { src: "/certificate2.png", alt: "Certificate 2" },
+                                { src: "/certificate3.png", alt: "Certificate 3" },
+                            ]}
+                        />
                     </div>
 
                     <div className="surface soft-outline rounded-3xl p-6">

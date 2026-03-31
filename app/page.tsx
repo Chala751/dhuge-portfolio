@@ -62,7 +62,7 @@ export default function Home() {
                   <p className="text-[var(--muted)]">Projects Delivered</p>
                 </div>
                 <div>
-                  <p className="font-serif text-3xl">07</p>
+                  <p className="font-serif text-3xl">08+</p>
                   <p className="text-[var(--muted)]">Years of Practice</p>
                 </div>
                 <div>
