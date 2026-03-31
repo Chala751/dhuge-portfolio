@@ -5,8 +5,8 @@ export default function Home() {
 
   return (
     <main className="page-shell">
-      <div className="mx-auto max-w-6xl px-6 pb-16 pt-10 md:px-10 md:pt-14">
-        <header className="section-reveal flex flex-col gap-8 border-b border-[var(--line)] pb-10 md:gap-12">
+      <div className="mx-auto max-w-6xl px-6 pb-16 pt-24 md:px-10 md:pt-28">
+        <div className="fixed inset-x-0 top-0 z-40 border-b border-[var(--line)] bg-[#0b0b0b]/95 px-6 py-4 backdrop-blur md:px-10">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               <div className="soft-outline surface flex h-12 w-12 items-center justify-center rounded-2xl font-serif text-xl">
@@ -21,7 +21,9 @@ export default function Home() {
               Open for 2026 commissions
             </div>
           </div>
+        </div>
 
+        <header className="section-reveal flex flex-col gap-8 border-b border-[var(--line)] pb-10 pt-8 md:gap-12">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-[1.15fr_0.85fr] md:gap-12">
             <div className="space-y-6">
               <p className="chip inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs uppercase tracking-[0.18em]">
