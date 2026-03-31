@@ -180,25 +180,90 @@ export default function Home() {
           </div>
         </section>
 
-        <footer className="footer-shell section-reveal section-reveal-delay-3 mt-12 rounded-3xl px-6 py-10 md:mt-16 md:px-8">
-          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Start a Project</p>
-              <h2 className="mt-4 max-w-xl font-serif text-3xl leading-tight md:text-5xl">
-                Ready to shape a space that belongs to its place?
-              </h2>
+        <footer className="footer-shell section-reveal section-reveal-delay-3 mt-12 -mx-6 px-6 py-12 md:mt-16 md:-mx-10 md:px-10">
+          <div className="grid gap-10 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="footer-logo flex h-12 w-12 items-center justify-center rounded-2xl border font-serif text-xl">
+                  DG
+                </div>
+                <div>
+                  <p className="footer-meta text-xs uppercase tracking-[0.22em]">Architecture Studio</p>
+                  <p className="footer-meta text-sm">Addis Ababa, Ethiopia</p>
+                </div>
+              </div>
+              <p className="text-sm text-[var(--muted)]">
+                Contemporary architecture focused on cultural clarity, climate-responsive design, and
+                enduring craftsmanship.
+              </p>
             </div>
-            <div className="flex flex-wrap gap-3">
-              <a
-                href="mailto:dhugasa.gemachu@studio.com"
-                className="btn-primary inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition hover:bg-[#000000]"
-              >
-                Contact Dhugasa
-              </a>
-              <button className="btn-outline inline-flex items-center justify-center rounded-full border px-6 py-3 text-sm font-semibold transition hover:bg-[#e5e5e5]">
-                Download Profile
-              </button>
+
+            <div className="space-y-3 text-sm">
+              <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Contact</p>
+              <p className="text-[var(--muted)]">+251 910 840 015</p>
+              <p className="text-[var(--muted)]">dugasa@gmail.com</p>
+              <p className="text-[var(--muted)]">dhugasa.studio</p>
             </div>
+
+            <div className="space-y-3 text-sm">
+              <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Address</p>
+              <p className="text-[var(--muted)]">Bole Sub-City, Addis Ababa</p>
+              <p className="text-[var(--muted)]">Ethiopia</p>
+              <div className="pt-3">
+                <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Socials</p>
+                <div className="mt-3 flex flex-wrap gap-3">
+                  <a
+                    href="https://web.facebook.com/dhugepeace"
+                    className="social-icon social-facebook inline-flex h-10 w-10 items-center justify-center rounded-full border"
+                    aria-label="Facebook"
+                  >
+                    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">
+                      <path d="M13.5 8.5V7.2c0-.7.5-1.2 1.2-1.2h1.8V3.5h-2.3c-2.2 0-3.7 1.5-3.7 3.7v1.3H8.3v2.5h2.2V20h3V11h2.3l.4-2.5h-2.7z" />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://t.me/ArchitectDu"
+                    className="social-icon social-telegram inline-flex h-10 w-10 items-center justify-center rounded-full border"
+                    aria-label="Telegram"
+                  >
+                    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">
+                      <path d="M21.7 3.9a1 1 0 0 0-1.1-.2L2.6 10.7a1 1 0 0 0 .1 1.9l4.6 1.6 2 4.8a1 1 0 0 0 1.7.2l2.6-2.9 4.7 3.4a1 1 0 0 0 1.6-.6l3-14a1 1 0 0 0-.2-.8ZM9 14.8l-.7 2.5-1.1-2.7 9.8-8.2-8 8.4z" />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/dhugepeace/"
+                    className="social-icon social-instagram inline-flex h-10 w-10 items-center justify-center rounded-full border"
+                    aria-label="Instagram"
+                  >
+                    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">
+                      <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Zm10 2H7a2 2 0 0 0-2 2v10c0 1.1.9 2 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Zm-5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm5-3.4a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://wa.me/251910840015"
+                    className="social-icon social-whatsapp inline-flex h-10 w-10 items-center justify-center rounded-full border"
+                    aria-label="WhatsApp"
+                  >
+                    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">
+                      <path d="M12 3a9 9 0 0 0-7.8 13.6L3 21l4.6-1.2A9 9 0 1 0 12 3Zm0 16.2a7.2 7.2 0 0 1-3.7-1L8 18l-2.7.7.7-2.6-.2-.4A7.2 7.2 0 1 1 12 19.2Zm4-5.3c-.2-.1-1.3-.6-1.5-.7-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-1-.4-1.9-1.1-2.6-2-.2-.2-.2-.4 0-.5l.6-.7c.2-.2.2-.4.1-.6-.1-.2-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.6.6-.9 1.4-.8 2.2.2 1.7 1.4 3.4 3.2 4.8 1.8 1.4 4.1 2.1 5.8 1.8.8-.1 1.6-.5 2-1.2.2-.4.2-.7.1-.8-.1-.1-.2-.2-.4-.3Z" />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/dhugepeace"
+                    className="social-icon social-linkedin inline-flex h-10 w-10 items-center justify-center rounded-full border"
+                    aria-label="LinkedIn"
+                  >
+                    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">
+                      <path d="M6.5 8.5H3.8V20h2.7V8.5Zm.2-3.2a1.6 1.6 0 1 1-3.2 0 1.6 1.6 0 0 1 3.2 0ZM20.4 20h-2.7v-5.6c0-1.3-.5-2.2-1.8-2.2-1 0-1.6.7-1.9 1.3-.1.2-.1.6-.1.9V20H11V8.5h2.6v1.6h.1c.4-.7 1.3-1.8 3.1-1.8 2.3 0 4 1.5 4 4.7V20Z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 border-t border-[var(--line)] pt-6 text-xs text-[var(--muted)]">
+            © 2026 Dugasa Gemechu Studio. All rights reserved.
           </div>
         </footer>
       </div>
