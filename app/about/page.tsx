@@ -141,13 +141,41 @@ export default function AboutPage() {
                             Dugasa holds multiple certifications in construction oversight, sustainable systems,
                             and project delivery. Replace the placeholders below with certificate images when ready.
                         </p>
-                        <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                            {[1, 2, 3, 4].map((item) => (
+                        <div className="mt-6 grid gap-4 md:grid-cols-[1.1fr_0.9fr]">
+                            <div className="media-frame overflow-hidden rounded-2xl">
+                                <img
+                                    src="/architect9.jpg"
+                                    alt="Featured certificate"
+                                    className="h-48 w-full object-cover sm:h-56"
+                                />
+                            </div>
+                            <div className="grid gap-3">
+                                {["Sustainability Systems", "Construction Oversight", "Project Delivery", "Site Safety"].map(
+                                    (label, index) => (
+                                        <div
+                                            key={label}
+                                            className="flex items-center justify-between rounded-2xl border border-[var(--line)] px-4 py-3 text-sm"
+                                        >
+                                            <div>
+                                                <p className="font-semibold text-[var(--paper)]">{label}</p>
+                                                <p className="text-xs text-[var(--muted)]">Certificate {index + 1}</p>
+                                            </div>
+                                            <span className="text-xs uppercase tracking-[0.18em] text-[var(--muted)]">
+                                                2020-
+                                                {index + 21}
+                                            </span>
+                                        </div>
+                                    )
+                                )}
+                            </div>
+                        </div>
+                        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                            {[1, 2, 3].map((item) => (
                                 <div key={item} className="media-frame overflow-hidden rounded-2xl">
                                     <img
-                                        src="/architect1.jpg"
-                                        alt={`Certificate placeholder ${item}`}
-                                        className="h-40 w-full object-cover"
+                                        src="/architect9.jpg"
+                                        alt={`Certificate gallery ${item}`}
+                                        className="h-32 w-full object-cover sm:h-28"
                                     />
                                 </div>
                             ))}
