@@ -93,12 +93,43 @@ export default function AboutPage() {
                     <div className="surface soft-outline rounded-3xl p-6">
                         <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Experience</p>
                         <h2 className="mt-3 font-serif text-3xl leading-tight">Practice highlights</h2>
-                        <ul className="mt-5 space-y-3 text-sm text-[var(--muted)]">
-                            <li>Led civic and residential projects from concept to construction delivery.</li>
-                            <li>Directed multidisciplinary teams across architecture, interior, and landscape scopes.</li>
-                            <li>Focused on climate-responsive design strategies and long-life material palettes.</li>
-                            <li>Collaborated with public institutions on community-oriented cultural facilities.</li>
-                        </ul>
+                        <p className="mt-3 text-sm text-[var(--muted)]">
+                            A decade of collaborative leadership across civic, residential, and cultural work.
+                        </p>
+                        <div className="mt-5 grid gap-4 text-sm text-[var(--muted)]">
+                            <div className="rounded-2xl border border-[var(--line)] p-4">
+                                <p className="font-semibold text-[var(--paper)]">Project leadership</p>
+                                <p className="mt-2">Led projects from concept to construction delivery with clear milestones.</p>
+                            </div>
+                            <div className="rounded-2xl border border-[var(--line)] p-4">
+                                <p className="font-semibold text-[var(--paper)]">Team direction</p>
+                                <p className="mt-2">Directed multidisciplinary teams across architecture, interior, and landscape scopes.</p>
+                            </div>
+                            <div className="rounded-2xl border border-[var(--line)] p-4">
+                                <p className="font-semibold text-[var(--paper)]">Climate response</p>
+                                <p className="mt-2">Prioritized passive strategies and durable material palettes.</p>
+                            </div>
+                            <div className="rounded-2xl border border-[var(--line)] p-4">
+                                <p className="font-semibold text-[var(--paper)]">Public collaboration</p>
+                                <p className="mt-2">Partnered with institutions on community-oriented cultural facilities.</p>
+                            </div>
+                        </div>
+                        <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                            <div className="media-frame overflow-hidden rounded-2xl">
+                                <img
+                                    src="/architect3.jpg"
+                                    alt="Experience project 1"
+                                    className="h-32 w-full object-cover"
+                                />
+                            </div>
+                            <div className="media-frame overflow-hidden rounded-2xl">
+                                <img
+                                    src="/architect4.jpg"
+                                    alt="Experience project 2"
+                                    className="h-32 w-full object-cover"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </section>
 
