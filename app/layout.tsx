@@ -14,7 +14,7 @@ const bodyFont = Sora({
 });
 
 export const metadata: Metadata = {
-  title: "Dugasa Gemechu | Architecture Portfolio",
+  title: "Dugassa Gemechu | Architecture Portfolio",
   description:
     "Portfolio of Dugasa Gemechu featuring contemporary architectural works, concepts, and studio practice.",
 };
