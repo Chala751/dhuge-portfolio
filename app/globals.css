@@ -231,6 +231,20 @@ body {
   color: #111111;
 }
 
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+}
+
+.back-link:hover {
+  color: var(--paper);
+}
+
 .footer-shell {
   background: #f7f7f7;
   color: #111111;
