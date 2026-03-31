@@ -56,7 +56,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 </header>
 
                 <section className="section-reveal section-reveal-delay-1 mt-10">
-                    <div className="overflow-hidden rounded-3xl bg-[#0b0b0b]">
+                    <div className="media-frame overflow-hidden rounded-3xl">
                         <img
                             src={project.image}
                             alt={project.name}
@@ -70,7 +70,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                         {project.images.map((image, index) => (
                             <div
                                 key={`${project.slug}-${index}`}
-                                className="overflow-hidden rounded-3xl bg-[#0b0b0b]"
+                                className="media-frame overflow-hidden rounded-3xl"
                             >
                                 <img
                                     src={image}

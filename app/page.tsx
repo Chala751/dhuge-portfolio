@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { projects } from "./data/projects";
+import ThemeToggle from "./components/ThemeToggle";
 
 export default function Home() {
 
   return (
     <main className="page-shell">
       <div className="mx-auto max-w-6xl px-6 pb-16 pt-24 md:px-10 md:pt-28">
-        <div className="fixed inset-x-0 top-0 z-40 border-b border-[var(--line)] bg-[#0b0b0b]/95 px-6 py-4 backdrop-blur md:px-10">
+        <div className="nav-shell fixed inset-x-0 top-0 z-40 border-b border-[var(--line)] px-6 py-4 backdrop-blur md:px-10">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               <div className="soft-outline surface flex h-12 w-12 items-center justify-center rounded-2xl font-serif text-xl">
@@ -17,8 +18,11 @@ export default function Home() {
                 <p className="text-sm text-[var(--muted)]">Addis Ababa, Ethiopia</p>
               </div>
             </div>
-            <div className="accent-pill rounded-full px-4 py-2 text-xs uppercase tracking-[0.18em]">
-              Open for 2026 commissions
+            <div className="flex items-center gap-3">
+              <div className="accent-pill rounded-full px-4 py-2 text-xs uppercase tracking-[0.18em]">
+                Open for 2026 commissions
+              </div>
+              <ThemeToggle />
             </div>
           </div>
         </div>
@@ -42,7 +46,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-3">
                 <a
                   href="mailto:dhugasa.gemachu@studio.com"
-                  className="inline-flex items-center justify-center rounded-full bg-[var(--paper)] px-6 py-3 text-sm font-semibold text-[var(--ink)] transition hover:bg-[#e5e5e5]"
+                  className="btn-primary inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition hover:bg-[#e5e5e5]"
                 >
                   Start a Project
                 </a>
@@ -126,7 +130,7 @@ export default function Home() {
                 href={`/projects/${project.slug}`}
                 className={`section-reveal section-reveal-delay-${index + 1} surface soft-outline card-hover rounded-3xl p-5`}
               >
-                <div className="mb-4 overflow-hidden rounded-2xl bg-[#0b0b0b]">
+                <div className="media-frame mb-4 overflow-hidden rounded-2xl">
                   <img
                     src={project.image}
                     alt={project.name}
@@ -175,7 +179,7 @@ export default function Home() {
           </div>
         </section>
 
-        <footer className="section-reveal section-reveal-delay-3 mt-12 rounded-3xl bg-[var(--paper)] px-6 py-10 text-[var(--ink)] md:mt-16 md:px-8">
+        <footer className="footer-shell section-reveal section-reveal-delay-3 mt-12 rounded-3xl px-6 py-10 md:mt-16 md:px-8">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Start a Project</p>
@@ -186,11 +190,11 @@ export default function Home() {
             <div className="flex flex-wrap gap-3">
               <a
                 href="mailto:dhugasa.gemachu@studio.com"
-                className="inline-flex items-center justify-center rounded-full bg-[var(--ink)] px-6 py-3 text-sm font-semibold text-[var(--paper)] transition hover:bg-[#000000]"
+                className="btn-primary inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition hover:bg-[#000000]"
               >
                 Contact Dhugasa
               </a>
-              <button className="inline-flex items-center justify-center rounded-full border border-[var(--ink)] px-6 py-3 text-sm font-semibold text-[var(--ink)] transition hover:bg-[#e5e5e5]">
+              <button className="btn-outline inline-flex items-center justify-center rounded-full border px-6 py-3 text-sm font-semibold transition hover:bg-[#e5e5e5]">
                 Download Profile
               </button>
             </div>
