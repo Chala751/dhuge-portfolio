@@ -51,20 +51,41 @@ export default function AboutPage() {
                     <div className="surface soft-outline rounded-3xl p-6">
                         <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Background</p>
                         <h2 className="mt-3 font-serif text-3xl leading-tight">Education and formation</h2>
-                        <div className="mt-5 space-y-4 text-sm">
-                            <div className="flex items-start gap-4 border-b border-[var(--line)] pb-4">
-                                <p className="font-serif text-2xl text-[var(--paper)]">2019</p>
-                                <div>
-                                    <p className="font-semibold">BSc Architecture</p>
-                                    <p className="text-[var(--muted)]">University of Gondar</p>
+                        <p className="mt-3 text-sm text-[var(--muted)]">
+                            Academic foundations that shaped the studio approach to material clarity and
+                            construction delivery.
+                        </p>
+                        <div className="media-frame mt-5 overflow-hidden rounded-2xl">
+                            <img
+                                src="/architect7.jpg"
+                                alt="Education and formation"
+                                className="h-72 w-full object-contain"
+                            />
+                        </div>
+                        <div className="mt-6 space-y-4 text-sm">
+                            <div className="rounded-2xl border border-[var(--line)] p-4">
+                                <div className="flex items-start justify-between gap-4">
+                                    <div>
+                                        <p className="font-semibold">BSc Architecture</p>
+                                        <p className="text-[var(--muted)]">University of Gondar</p>
+                                    </div>
+                                    <p className="font-serif text-2xl text-[var(--paper)]">2019</p>
                                 </div>
+                                <p className="mt-3 text-[var(--muted)]">
+                                    Focused on spatial composition, tectonics, and contextual design research.
+                                </p>
                             </div>
-                            <div className="flex items-start gap-4">
-                                <p className="font-serif text-2xl text-[var(--paper)]">2023</p>
-                                <div>
-                                    <p className="font-semibold">MSc Construction Management</p>
-                                    <p className="text-[var(--muted)]">Addis Ababa University</p>
+                            <div className="rounded-2xl border border-[var(--line)] p-4">
+                                <div className="flex items-start justify-between gap-4">
+                                    <div>
+                                        <p className="font-semibold">MSc Construction Management</p>
+                                        <p className="text-[var(--muted)]">Addis Ababa University</p>
+                                    </div>
+                                    <p className="font-serif text-2xl text-[var(--paper)]">2023</p>
                                 </div>
+                                <p className="mt-3 text-[var(--muted)]">
+                                    Specialization in project delivery systems, cost control, and site coordination.
+                                </p>
                             </div>
                         </div>
                     </div>
