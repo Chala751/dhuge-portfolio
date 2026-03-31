@@ -286,17 +286,17 @@ body {
 }
 
 .footer-shell {
+  background: #0b0b0b;
+  color: #f7f7f7;
+}
+
+:root[data-theme="light"] .footer-shell {
   background: #f7f7f7;
   color: #111111;
 }
 
-:root[data-theme="light"] .footer-shell {
-  background: #111111;
-  color: #f7f7f7;
-}
-
 .footer-shell .footer-logo {
-  background: #0b0b0b;
+  background: #111111;
   color: #f7f7f7;
   border-color: rgba(255, 255, 255, 0.2);
 }
@@ -306,7 +306,7 @@ body {
 }
 
 :root[data-theme="light"] .footer-shell .footer-logo {
-  background: #f7f7f7;
+  background: #ffffff;
   color: #111111;
   border-color: rgba(0, 0, 0, 0.2);
 }
