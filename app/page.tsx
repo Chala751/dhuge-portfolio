@@ -3,6 +3,20 @@ import { projects } from "./data/projects";
 import NavBar from "./components/NavBar";
 
 export default function Home() {
+  const categoryOrder = [
+    "Pavilion",
+    "School",
+    "Residential",
+    "Church",
+    "Corridor",
+    "Urban Agriculture",
+    "Hospital",
+    "Others",
+  ];
+  const groupedProjects = categoryOrder.map((category) => ({
+    category,
+    items: projects.filter((project) => project.category === category),
+  }));
 
   return (
     <main className="page-shell">
@@ -124,24 +138,42 @@ export default function Home() {
             <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Selected Works</p>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {projects.map((project, index) => (
-              <Link
-                key={project.slug}
-                href={`/projects/${project.slug}`}
-                className={`section-reveal section-reveal-delay-${index + 1} surface soft-outline card-hover rounded-3xl p-5`}
-              >
-                <div className="media-frame mb-4 overflow-hidden rounded-2xl">
-                  <img
-                    src={project.image}
-                    alt={project.name}
-                    className="h-48 w-full object-cover object-center"
-                  />
+          <div className="space-y-10">
+            {groupedProjects.map((group) => (
+              <div key={group.category} className="space-y-6">
+                <div className="flex flex-wrap items-end justify-between gap-4">
+                  <h3 className="font-serif text-2xl md:text-3xl">{group.category} Projects</h3>
+                  <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">
+                    {group.items.length ? `${group.items.length} Projects` : "Coming Soon"}
+                  </p>
                 </div>
-                <p className="text-xs uppercase tracking-[0.18em] text-[var(--muted)]">{project.type}</p>
-                <h3 className="mt-2 font-serif text-2xl leading-tight">{project.name}</h3>
-                <p className="mt-3 text-sm leading-6 text-[var(--muted)]">{project.note}</p>
-              </Link>
+                {group.items.length ? (
+                  <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+                    {group.items.map((project, index) => (
+                      <Link
+                        key={project.slug}
+                        href={`/projects/${project.slug}`}
+                        className={`section-reveal section-reveal-delay-${index + 1} surface soft-outline card-hover rounded-3xl p-5`}
+                      >
+                        <div className="media-frame mb-4 overflow-hidden rounded-2xl">
+                          <img
+                            src={project.image}
+                            alt={project.name}
+                            className="h-48 w-full object-cover object-center"
+                          />
+                        </div>
+                        <p className="text-xs uppercase tracking-[0.18em] text-[var(--muted)]">{project.type}</p>
+                        <h3 className="mt-2 font-serif text-2xl leading-tight">{project.name}</h3>
+                        <p className="mt-3 text-sm leading-6 text-[var(--muted)]">{project.note}</p>
+                      </Link>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="rounded-3xl border border-[var(--line)] p-6 text-sm text-[var(--muted)]">
+                    Projects in this category will be added soon.
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </section>
