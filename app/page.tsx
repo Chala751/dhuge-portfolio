@@ -92,12 +92,20 @@ export default function Home() {
             </div>
             <div className="space-y-4">
               <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Studio Founder</p>
-              <h2 className="font-serif text-3xl leading-tight md:text-4xl">Dhugasa Gemachu</h2>
+              <h2 className="font-serif text-3xl leading-tight md:text-4xl">Dugasa Gemechu</h2>
               <p className="text-sm leading-7 text-[var(--muted)] md:text-base">
                 An architect focused on material clarity, climate-responsive form, and spaces that honor
-                cultural memory. Dhugasa leads projects from concept through delivery with a calm,
+                cultural memory. Dugasa leads projects from concept through delivery with a calm,
                 detail-first approach.
               </p>
+              <div>
+                <Link
+                  href="/about"
+                  className="btn-primary inline-flex items-center justify-center rounded-full px-5 py-2 text-sm font-semibold transition hover:bg-[#e5e5e5]"
+                >
+                  View Detail About Me
+                </Link>
+              </div>
               <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.18em] text-[var(--muted)]">
                 <span className="rounded-full border border-[var(--line)] px-3 py-2">Principal Architect</span>
                 <span className="rounded-full border border-[var(--line)] px-3 py-2">Urban + Civic</span>
