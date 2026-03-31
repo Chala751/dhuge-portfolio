@@ -26,10 +26,10 @@ export default function AboutPage() {
                             Back to portfolio
                         </Link>
                         <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">About</p>
-                        <h1 className="font-serif text-4xl leading-tight md:text-5xl">Dugasa Gemechu</h1>
+                        <h1 className="font-serif text-4xl leading-tight md:text-5xl">Dugassa Gemechu Ayana</h1>
                         <p className="text-sm leading-7 text-[var(--muted)] md:text-base">
                             An architect known for calm, detail-first spaces that respect culture, climate, and material
-                            honesty. Dugasa leads projects from early concept to built form across civic, residential,
+                            honesty. Dugassa leads projects from early concept to built form across civic, residential,
                             and mixed-use work in East Africa.
                         </p>
                         <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.18em] text-[var(--muted)]">

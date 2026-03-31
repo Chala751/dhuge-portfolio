@@ -13,7 +13,7 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-[1.15fr_0.85fr] md:gap-12">
             <div className="space-y-6">
               <p className="chip inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs uppercase tracking-[0.18em]">
-                Dugasa Gemechu
+                Dugassa Gemechu Ayana
                 <span className="h-2 w-2 rounded-full bg-[var(--paper)]" aria-hidden />
               </p>
               <h1 className="font-serif text-5xl leading-[0.96] md:text-7xl">
@@ -92,10 +92,10 @@ export default function Home() {
             </div>
             <div className="space-y-4">
               <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Studio Founder</p>
-              <h2 className="font-serif text-3xl leading-tight md:text-4xl">Dugasa Gemechu</h2>
+              <h2 className="font-serif text-3xl leading-tight md:text-4xl">Dugassa Gemechu Ayana</h2>
               <p className="text-sm leading-7 text-[var(--muted)] md:text-base">
                 An architect focused on material clarity, climate-responsive form, and spaces that honor
-                cultural memory. Dugasa leads projects from concept through delivery with a calm,
+                cultural memory. Dugassa leads projects from concept through delivery with a calm,
                 detail-first approach.
               </p>
               <div>
@@ -201,13 +201,13 @@ export default function Home() {
             <div className="space-y-3 text-sm">
               <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Contact</p>
               <p className="text-[var(--muted)]">+251 910 840 015</p>
-              <p className="text-[var(--muted)]">dugasa@gmail.com</p>
-              <p className="text-[var(--muted)]">dhugasa.studio</p>
+              <p className="text-[var(--muted)]">dugassagemechu2013@gmail.com</p>
+              <p className="text-[var(--muted)]">dugassa.studio</p>
             </div>
 
             <div className="space-y-3 text-sm">
               <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Address</p>
-              <p className="text-[var(--muted)]">Bole Sub-City, Addis Ababa</p>
+              <p className="text-[var(--muted)]">Kirkos Sub-City, Addis Ababa</p>
               <p className="text-[var(--muted)]">Ethiopia</p>
               <div className="pt-3">
                 <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Socials</p>
@@ -231,7 +231,7 @@ export default function Home() {
                     </svg>
                   </a>
                   <a
-                    href="https://www.instagram.com/dhugepeace/"
+                    href="https://www.instagram.com/dhugaadhaaf/"
                     className="social-icon social-instagram inline-flex h-10 w-10 items-center justify-center rounded-full border"
                     aria-label="Instagram"
                   >
@@ -249,7 +249,7 @@ export default function Home() {
                     </svg>
                   </a>
                   <a
-                    href="https://www.linkedin.com/in/dhugepeace"
+                    href="https://www.linkedin.com/in/dugassa-gemechu-b0a606271/"
                     className="social-icon social-linkedin inline-flex h-10 w-10 items-center justify-center rounded-full border"
                     aria-label="LinkedIn"
                   >
@@ -263,7 +263,7 @@ export default function Home() {
           </div>
 
           <div className="mt-10 border-t border-[var(--line)] pt-6 text-xs text-[var(--muted)]">
-            © 2026 Dugasa Gemechu Studio. All rights reserved.
+            © 2026 Dugassa Gemechu Studio. All rights reserved.
           </div>
         </footer>
       </div>
