@@ -13,7 +13,7 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-[1.15fr_0.85fr] md:gap-12">
             <div className="space-y-6">
               <p className="chip inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs uppercase tracking-[0.18em]">
-                Dhugasa Gemachu
+                Dugasa Gemechu
                 <span className="h-2 w-2 rounded-full bg-[var(--paper)]" aria-hidden />
               </p>
               <h1 className="font-serif text-5xl leading-[0.96] md:text-7xl">
@@ -27,14 +27,11 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="mailto:dhugasa.gemachu@studio.com"
+                  href="#featured-projects"
                   className="btn-primary inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition hover:bg-[#e5e5e5]"
                 >
-                  Start a Project
+                  View My Projects
                 </a>
-                <button className="soft-outline surface inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-[var(--paper)] transition hover:-translate-y-0.5">
-                  View Studio Profile
-                </button>
               </div>
             </div>
 
@@ -63,11 +60,25 @@ export default function Home() {
                   <p className="text-[var(--muted)]">Client-tailored Process</p>
                 </div>
               </div>
+              <div className="mt-6 grid grid-cols-3 gap-3">
+                <div className="media-frame overflow-hidden rounded-2xl">
+                  <img src="/architect4.jpg" alt="Current focus project 1" className="h-20 w-full object-cover" />
+                </div>
+                <div className="media-frame overflow-hidden rounded-2xl">
+                  <img src="/architect5.jpg" alt="Current focus project 2" className="h-20 w-full object-cover" />
+                </div>
+                <div className="media-frame overflow-hidden rounded-2xl">
+                  <img src="/architect6.jpg" alt="Current focus project 3" className="h-20 w-full object-cover" />
+                </div>
+              </div>
             </div>
           </div>
         </header>
 
-        <section className="section-reveal section-reveal-delay-1 mt-12 md:mt-16">
+        <section
+          id="featured-projects"
+          className="section-reveal section-reveal-delay-1 mt-12 md:mt-16"
+        >
           <div className="surface soft-outline grid grid-cols-1 items-center gap-8 rounded-3xl p-6 md:grid-cols-[0.9fr_1.1fr] md:gap-12">
             <div className="relative">
               <div className="absolute -inset-2 rounded-[2rem] bg-gradient-to-br from-[#ffffff]/20 via-transparent to-[#ffffff]/5 blur-lg" />
