@@ -38,6 +38,8 @@ export default function CertificateGallery({ featured, gallery }: CertificateGal
                         "Project Planning",
                         "Contract Administration",
                         "Sustainable Design",
+                        "Grade Report",
+                        "MA certificate",
                     ].map((label, index) => (
                         <div
                             key={label}

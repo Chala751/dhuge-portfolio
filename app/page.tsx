@@ -58,7 +58,7 @@ export default function Home() {
               </div>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
-                  <p className="font-serif text-3xl">18+</p>
+                  <p className="font-serif text-3xl">25+</p>
                   <p className="text-[var(--muted)]">Projects Delivered</p>
                 </div>
                 <div>

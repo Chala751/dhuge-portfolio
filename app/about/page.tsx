@@ -79,8 +79,8 @@ export default function AboutPage() {
                             <div className="rounded-2xl border border-[var(--line)] p-4">
                                 <div className="flex items-start justify-between gap-4">
                                     <div>
-                                        <p className="font-semibold">MSc Construction Management</p>
-                                        <p className="text-[var(--muted)]">Addis Ababa University</p>
+                                        <p className="font-semibold">MA Project Management</p>
+                                        <p className="text-[var(--muted)]">Select College ,Addis Ababa </p>
                                     </div>
                                     <p className="font-serif text-2xl text-[var(--paper)]">2024</p>
                                 </div>
@@ -148,6 +148,8 @@ export default function AboutPage() {
                                 { src: "/certificate1.png", alt: "Certificate 1" },
                                 { src: "/certificate2.png", alt: "Certificate 2" },
                                 { src: "/certificate3.png", alt: "Certificate 3" },
+                                { src: "/certificate4.png", alt: "Certificate 4" },
+                                { src: "/certificate5.png", alt: "Certificate 5" },
                             ]}
                         />
                     </div>
