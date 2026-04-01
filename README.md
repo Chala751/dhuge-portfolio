@@ -2,6 +2,8 @@
 
 Monochrome portfolio site for an architecture studio with project detail pages, a founder bio, and light/dark theme support.
 
+Live site: https://duge-portfolio.vercel.app
+
 ## Quick Start
 
 Install dependencies and start the dev server:
@@ -20,6 +22,8 @@ app/
 	about/                 # Founder bio and credentials
 		page.tsx
 	components/            # Reusable UI components
+		CertificateGallery.tsx
+		DocumentsGallery.tsx
 		NavBar.tsx
 		ThemeToggle.tsx
 	data/                  # Shared content/data
@@ -30,7 +34,7 @@ app/
 	globals.css            # Global styles + theme tokens
 	layout.tsx             # Root layout and fonts
 	page.tsx               # Main landing page
-public/                  # Static images
+public/                  # Static assets (images + PDFs)
 ```
 
 ## Content Updates
