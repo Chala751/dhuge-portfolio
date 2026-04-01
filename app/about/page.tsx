@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CertificateGallery from "../components/CertificateGallery";
+import DocumentsGallery from "../components/DocumentsGallery";
 
 export default function AboutPage() {
     return (
@@ -170,6 +171,28 @@ export default function AboutPage() {
                                 <p className="font-semibold text-[var(--paper)]">Human rhythm</p>
                                 <p className="mt-2">Plans that celebrate daily rituals and community connection.</p>
                             </div>
+                        </div>
+                        <div className="mt-6">
+                            <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Documents</p>
+                            <DocumentsGallery
+                                items={[
+                                    {
+                                        title: "CV",
+                                        subtitle: "Profile overview",
+                                        href: "/dugassa%20cv.pdf",
+                                    },
+                                    {
+                                        title: "Dugassa Doc",
+                                        subtitle: "Credentials + awards",
+                                        href: "/dugassa%20doc.pdf",
+                                    },
+                                    {
+                                        title: "Experience",
+                                        subtitle: "Project history",
+                                        href: "/dugassa%20exp.pdf",
+                                    },
+                                ]}
+                            />
                         </div>
                     </div>
                 </section>
