@@ -7,6 +7,8 @@ export default function Home() {
     "Pavilion",
     "School",
     "Residential",
+    "Hotel",
+    "Mixed Use",
     "Church",
     "Corridor",
     "Urban Agriculture",
@@ -58,7 +60,7 @@ export default function Home() {
               </div>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
-                  <p className="font-serif text-3xl">25+</p>
+                  <p className="font-serif text-3xl">35+</p>
                   <p className="text-[var(--muted)]">Projects Delivered</p>
                 </div>
                 <div>
