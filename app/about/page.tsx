@@ -234,6 +234,11 @@ export default function AboutPage() {
                                         subtitle: "Project history",
                                         href: "/dugassa%20exp.pdf",
                                     },
+                                    {
+                                        title: "Student Works",
+                                        subtitle: "Academic portfolio",
+                                        href: "/dugassa%20works%20while%20student.pdf",
+                                    },
                                 ]}
                             />
                         </div>
