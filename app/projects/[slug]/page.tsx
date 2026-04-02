@@ -106,7 +106,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                                 <img
                                     src={image}
                                     alt={`${project.name} view ${index + 1}`}
-                                    className="h-64 w-full object-cover object-center md:h-80"
+                                    className="h-auto w-full object-cover object-center sm:h-64 md:h-80"
                                 />
                             </div>
                         ))}
