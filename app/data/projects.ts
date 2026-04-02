@@ -361,7 +361,7 @@ export const projects: Project[] = [
         year: "2025",
         area: "1200 m2",
         image: "/hotel.png",
-        images: ["/hotel.png", "/hotel1.png"],
+        images: ["/hotel.png", "/hotel2.png", "/hotel3.png"],
     },
     {
         slug: "hawasa-mixed-use-building",
