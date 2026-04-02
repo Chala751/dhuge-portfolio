@@ -262,7 +262,7 @@ export default function AboutPage() {
                                 </h2>
                             </div>
                             <a
-                                href="mailto:dhugasa.gemachu@studio.com"
+                                href="mailto:dugassagemechu2013@gmail.com"
                                 className="btn-primary inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition hover:bg-[#000000]"
                             >
                                 Contact Dugasa
