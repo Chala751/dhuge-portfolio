@@ -217,6 +217,13 @@ export default function AboutPage() {
                         </div>
                         <div className="mt-6">
                             <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Documents</p>
+                            <div className="media-frame mt-4 overflow-hidden rounded-2xl">
+                                <img
+                                    src="/new.png"
+                                    alt="Student works presentation board"
+                                    className="h-48 w-full object-cover"
+                                />
+                            </div>
                             <DocumentsGallery
                                 items={[
                                     {
