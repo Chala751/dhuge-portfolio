@@ -1,8 +1,15 @@
+"use client";
+
 import Link from "next/link";
+import { useMemo, useState } from "react";
 import { projects } from "./data/projects";
 import NavBar from "./components/NavBar";
 
 export default function Home() {
+  const [searchText, setSearchText] = useState("");
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeYear, setActiveYear] = useState("All");
+
   const categoryOrder = [
     "Pavilion",
     "School",
@@ -15,9 +22,37 @@ export default function Home() {
     "Hospital",
     "Others",
   ];
+  const categories = useMemo(() => {
+    const seen = new Set(projects.map((project) => project.category));
+    return [
+      "All",
+      ...categoryOrder.filter((category) => seen.has(category)),
+      ...Array.from(seen).filter((category) => !categoryOrder.includes(category)),
+    ];
+  }, [categoryOrder]);
+
+  const years = useMemo(() => {
+    const seen = new Set(projects.map((project) => project.year).filter(Boolean));
+    return ["All", ...Array.from(seen).sort((a, b) => Number(b) - Number(a))];
+  }, []);
+
+  const filteredProjects = useMemo(() => {
+    const search = searchText.trim().toLowerCase();
+    return projects.filter((project) => {
+      const matchesCategory = activeCategory === "All" || project.category === activeCategory;
+      const matchesYear = activeYear === "All" || project.year === activeYear;
+      const matchesSearch =
+        !search ||
+        project.name.toLowerCase().includes(search) ||
+        project.location.toLowerCase().includes(search) ||
+        project.note.toLowerCase().includes(search);
+      return matchesCategory && matchesYear && matchesSearch;
+    });
+  }, [activeCategory, activeYear, searchText]);
+
   const groupedProjects = categoryOrder.map((category) => ({
     category,
-    items: projects.filter((project) => project.category === category),
+    items: filteredProjects.filter((project) => project.category === category),
   }));
 
   return (
@@ -138,6 +173,64 @@ export default function Home() {
               <h2 className="font-serif text-3xl md:text-4xl">Featured Projects</h2>
             </div>
             <p className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">Selected Works</p>
+          </div>
+
+          <div className="surface soft-outline mb-8 rounded-3xl p-5">
+            <div className="grid gap-4 md:grid-cols-[1.4fr_0.6fr_0.8fr] md:items-center">
+              <div className="relative">
+                <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[var(--muted)]">🔍</span>
+                <input
+                  value={searchText}
+                  onChange={(event) => setSearchText(event.target.value)}
+                  placeholder="Search by project name, city, or notes"
+                  className="w-full rounded-full border border-[var(--line)] bg-[var(--surface)]/80 py-3 pl-10 pr-4 text-sm text-[var(--paper)] placeholder:text-[var(--muted)] focus:border-[var(--paper)] focus:outline-none"
+                  aria-label="Search projects"
+                />
+              </div>
+              <div>
+                <select
+                  value={activeYear}
+                  onChange={(event) => setActiveYear(event.target.value)}
+                  className="w-full rounded-full border border-[var(--line)] bg-[var(--surface)]/80 px-4 py-3 text-sm text-[var(--paper)] focus:border-[var(--paper)] focus:outline-none"
+                  aria-label="Filter projects by year"
+                >
+                  {years.map((year) => (
+                    <option key={year} value={year}>
+                      {year === "All" ? "All Years" : year}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    type="button"
+                    onClick={() => setActiveCategory(category)}
+                    className={`rounded-full border px-3 py-2 text-xs uppercase tracking-[0.18em] transition ${activeCategory === category
+                      ? "border-[var(--paper)] bg-[var(--chip-selected-bg)] text-[var(--chip-selected-text)] shadow-sm"
+                      : "border-[var(--line)] bg-[var(--surface)]/70 text-[var(--muted)] hover:border-[var(--paper)] hover:text-[var(--paper)]"
+                      }`}
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div className="mt-4 flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.18em] text-[var(--muted)]">
+              <span>Showing {filteredProjects.length} projects</span>
+              <button
+                type="button"
+                onClick={() => {
+                  setSearchText("");
+                  setActiveCategory("All");
+                  setActiveYear("All");
+                }}
+                className="rounded-full border border-[var(--line)] bg-[var(--surface)]/70 px-3 py-1 text-[var(--muted)] hover:border-[var(--paper)] hover:text-[var(--paper)]"
+              >
+                Reset filters
+              </button>
+            </div>
           </div>
 
           <div className="space-y-10">

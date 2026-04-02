@@ -11,6 +11,8 @@
   --teal: #4d4d4d;
   --gold: #e0e0e0;
   --rose: #cfcfcf;
+  --chip-selected-text: #0b0b0b;
+  --chip-selected-bg: #f7f7f7;
 }
 
 :root[data-theme="light"] {
@@ -24,6 +26,8 @@
   --teal: #3c3c3c;
   --gold: #5a5a5a;
   --rose: #666666;
+  --chip-selected-text: #ffffff;
+  --chip-selected-bg: #111111;
 }
 
 @theme inline {
