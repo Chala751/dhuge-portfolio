@@ -144,13 +144,56 @@ export default function AboutPage() {
                             and project delivery.
                         </p>
                         <CertificateGallery
-                            featured={{ src: "/certificate.png", alt: "Featured certificate" }}
-                            gallery={[
-                                { src: "/certificate1.png", alt: "Certificate 1" },
-                                { src: "/certificate2.png", alt: "Certificate 2" },
-                                { src: "/certificate3.png", alt: "Certificate 3" },
-                                { src: "/certificate4.png", alt: "Certificate 4" },
-                                { src: "/certificate5.png", alt: "Certificate 5" },
+                            certificates={[
+                                {
+                                    src: "/certificate.png",
+                                    alt: "Graduation certificate",
+                                    title: "Graduation Certificate",
+                                    year: "",
+                                    featured: true,
+                                },
+                                {
+                                    src: "/certificate1.png",
+                                    alt: "Project planning certificate",
+                                    title: "Project Planning",
+                                    year: "",
+                                },
+                                {
+                                    src: "/certificate2.png",
+                                    alt: "Contract administration certificate",
+                                    title: "Contract Administration",
+                                    year: "",
+                                },
+                                {
+                                    src: "/certificate3.png",
+                                    alt: "Sustainable design certificate",
+                                    title: "Sustainable Design",
+                                    year: "",
+                                },
+                                {
+                                    src: "/certificate4.png",
+                                    alt: "Grade report certificate",
+                                    title: "Grade Report",
+                                    year: "",
+                                },
+                                {
+                                    src: "/certificate5.png",
+                                    alt: "MA project management certificate",
+                                    title: "MA certificate",
+                                    year: "",
+                                },
+                                {
+                                    src: "/certificate6.png",
+                                    alt: "Certificate of participation in construction management",
+                                    title: "Construction Management Participation",
+                                    year: "",
+                                },
+                                {
+                                    src: "/certificate7.png",
+                                    alt: "Certificate of completion in construction management",
+                                    title: "Construction Management Completion",
+                                    year: "",
+                                },
                             ]}
                         />
                     </div>

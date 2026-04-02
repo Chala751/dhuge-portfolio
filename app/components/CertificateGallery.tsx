@@ -7,68 +7,81 @@ type CertificateImage = {
     alt: string;
 };
 
-type CertificateGalleryProps = {
-    featured: CertificateImage;
-    gallery: CertificateImage[];
+type CertificateItem = CertificateImage & {
+    title: string;
+    year?: string;
+    featured?: boolean;
 };
 
-export default function CertificateGallery({ featured, gallery }: CertificateGalleryProps) {
+type CertificateGalleryProps = {
+    certificates: CertificateItem[];
+};
+
+export default function CertificateGallery({ certificates }: CertificateGalleryProps) {
     const [activeImage, setActiveImage] = useState<CertificateImage | null>(null);
 
-    const allImages = [featured, ...gallery];
+    const featuredItem = certificates.find((item) => item.featured) ?? certificates[0];
+    const galleryItems = certificates.filter((item) => item !== featuredItem);
 
     return (
         <>
-            <div className="mt-6 grid gap-4 md:grid-cols-[1.1fr_0.9fr]">
-                <button
-                    type="button"
-                    onClick={() => setActiveImage(featured)}
-                    className="media-frame overflow-hidden rounded-2xl text-left"
-                    aria-label="Open featured certificate"
-                >
-                    <img
-                        src={featured.src}
-                        alt={featured.alt}
-                        className="h-48 w-full object-cover sm:h-56"
-                    />
-                </button>
-                <div className="grid gap-3">
-                    {[
-                        "Graduation Certificate",
-                        "Project Planning",
-                        "Contract Administration",
-                        "Sustainable Design",
-                        "Grade Report",
-                        "MA certificate",
-                    ].map((label, index) => (
-                        <div
-                            key={label}
-                            className="flex items-center justify-between rounded-2xl border border-[var(--line)] px-4 py-3 text-sm"
-                        >
+            <div className="mt-6 grid gap-4">
+                {featuredItem ? (
+                    <button
+                        type="button"
+                        onClick={() => setActiveImage(featuredItem)}
+                        className="group relative overflow-hidden rounded-3xl text-left"
+                        aria-label={`Open ${featuredItem.alt}`}
+                    >
+                        <img
+                            src={featuredItem.src}
+                            alt={featuredItem.alt}
+                            className="h-64 w-full object-cover sm:h-72"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                        <div className="absolute bottom-0 left-0 right-0 flex flex-wrap items-end justify-between gap-3 p-5 text-white">
                             <div>
-                                <p className="font-semibold text-[var(--paper)]">{label}</p>
-                                <p className="text-xs text-[var(--muted)]">Certificate {index + 1}</p>
+                                <p className="text-xs uppercase tracking-[0.2em] text-white/70">Featured</p>
+                                <p className="mt-1 font-serif text-2xl">{featuredItem.title}</p>
                             </div>
-                            <span className="text-xs uppercase tracking-[0.18em] text-[var(--muted)]">
-                                2020-
-                                {index + 21}
-                            </span>
+                            {featuredItem.year ? (
+                                <span className="rounded-full border border-white/40 px-3 py-1 text-xs uppercase tracking-[0.2em]">
+                                    {featuredItem.year}
+                                </span>
+                            ) : null}
                         </div>
+                    </button>
+                ) : null}
+                <div className="grid gap-3 sm:grid-cols-2">
+                    {galleryItems.map((item) => (
+                        <button
+                            key={item.src}
+                            type="button"
+                            onClick={() => setActiveImage(item)}
+                            className="group overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface)] text-left"
+                            aria-label={`Open ${item.alt}`}
+                        >
+                            <div className="media-frame overflow-hidden">
+                                <img
+                                    src={item.src}
+                                    alt={item.alt}
+                                    className="h-40 w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+                                />
+                            </div>
+                            <div className="flex items-center justify-between gap-4 px-4 py-3">
+                                <div>
+                                    <p className="text-sm font-semibold text-[var(--paper)]">{item.title}</p>
+                                    <p className="text-xs text-[var(--muted)]">{item.alt}</p>
+                                </div>
+                                {item.year ? (
+                                    <span className="text-xs uppercase tracking-[0.2em] text-[var(--muted)]">
+                                        {item.year}
+                                    </span>
+                                ) : null}
+                            </div>
+                        </button>
                     ))}
                 </div>
-            </div>
-            <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                {gallery.map((item) => (
-                    <button
-                        key={item.src}
-                        type="button"
-                        onClick={() => setActiveImage(item)}
-                        className="media-frame overflow-hidden rounded-2xl text-left"
-                        aria-label={`Open ${item.alt}`}
-                    >
-                        <img src={item.src} alt={item.alt} className="h-32 w-full object-cover sm:h-28" />
-                    </button>
-                ))}
             </div>
 
             {activeImage ? (
